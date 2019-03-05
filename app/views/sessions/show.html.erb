@@ -1,7 +1,8 @@
 
-<h1><%= @session.theatre %></h1>
+<h1><%= @session.film.f_title %></h1>
+<h1><%= @session.theatre.t_title %></h1>
 <h3><%= @session.time %></h3>
 <div class="btn-group" role="group" aria-label="Basic">
-<%= button_to 'Remove', @session, method: :delete, data: {confirm: 'Удалить?'},class: "btn btn-outline-primary my-2 my-sm-0"%>
+  <%= button_to 'Remove', @session, method: :delete, data: {confirm: 'Удалить?'},class: "btn btn-outline-primary my-2 my-sm-0"%>
   <%= button_to 'Edit', edit_session_path(@session), method: 'get', class: "btn btn-outline-primary my-2 my-sm-0"%>
 </div>

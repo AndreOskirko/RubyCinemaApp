@@ -1,17 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  theatre: MyString
-  text,: MyString
-  film: MyString
-  text,: MyString
+  theatre: one
+  film: one
   time: MyString
-  text: MyString
 
 two:
-  theatre: MyString
-  text,: MyString
-  film: MyString
-  text,: MyString
+  theatre: two
+  film: two
   time: MyString
-  text: MyString

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_05_120559) do
+ActiveRecord::Schema.define(version: 2019_03_07_081325) do
 
   create_table "films", force: :cascade do |t|
     t.string "f_title"
@@ -20,11 +20,13 @@ ActiveRecord::Schema.define(version: 2019_03_05_120559) do
   end
 
   create_table "sessions", force: :cascade do |t|
-    t.string "theatre"
-    t.string "film"
+    t.integer "theatre_id"
+    t.integer "film_id"
     t.string "time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["film_id"], name: "index_sessions_on_film_id"
+    t.index ["theatre_id"], name: "index_sessions_on_theatre_id"
   end
 
   create_table "theatres", force: :cascade do |t|

@@ -1,10 +1,13 @@
+<h1>Create a Session</h1>
+<%= simple_form_for  @session do |f| %>
+  <div class="col-md-10">
+  <p>Film: <%= f.select :film_id, Film.all.map { |film| [ film.f_title, film.id ]},class:"form-control form-control-lg"  %></p>
+  <p>Theatre: <%= f.select :theatre_id, Theatre.all.map { |theatre| [ theatre.t_title, theatre.id ] } %></p>
 
-<%= simple_form_for @session do |f| %>
-  <%= f.input :theatre, collection: Theatre.all.map{|item|[item.t_title]},include_blank: true %>
-  <%= f.input :film, collection: Film.all.map{|item|[item.f_title]},include_blank: true%>
-  <%=f.input :time %>
-  <%= f.button :submit %>
+  Time:  <%= f.text_field :time, class: "form-control" %>
+  </div>
 
+  <%= f.submit class: "btn btn-default btn-primary", style:"margin:15px" %>
 <% end %>
 
 

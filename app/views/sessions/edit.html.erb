@@ -1,7 +1,7 @@
 <h3>Edit a Session</h3>
-<%= simple_form_for @session do |f| %>
-  <%= f.input :theatre, collection: Theatre.all.map{|item|[item.t_title]},include_blank: true, style:"margin: 40px" %>
-  <%= f.input :film, collection: Film.all.map{|item|[item.f_title]},include_blank: true%>
-  <%=f.input :time %>
-  <%= f.button :submit,class:"btn btn-outline-primary my-2 my-sm-" %>
+<%= form_with model: @session do |form| %>
+  <p>Owner: <%= form.select :film_id, Film.all.map { |film| [ film.f_title, film.id ] } %></p>
+  <p>Owner: <%= form.select :theatre_id, Theatre.all.map { |theatre| [ theatre.t_title, theatre.id ] } %></p>
+  <p>Time: <%= form.text_field :time %></p>
+  <%= form.submit %>
 <% end %>

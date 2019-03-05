@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
     end
 
     def create
-      session = Session.create(session_params)
+      @session = Session.create(session_params)
       redirect_to sessions_path
     end
 
@@ -39,6 +39,6 @@ class SessionsController < ApplicationController
     private
 
     def session_params
-      params.require( :session).permit( :theatre,:film, :time)
+      params.require( :session).permit( :theatre_id,:film_id, :time)
     end
   end

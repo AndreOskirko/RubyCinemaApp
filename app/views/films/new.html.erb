@@ -1,8 +1,8 @@
 
 <%= simple_form_for @film do |f| %>
-  <%= f.input :f_title%>
-  <%= f.input :f_body %>
-  <%= f.button :submit %>
+  <%= f.input :f_title, label:'Title'%>
+  <%= f.input :f_body, label: 'Summary' %>
+  <%= f.button :submit,class:"btn btn-outline-primary my-2 my-sm-0" %>
 
 <% end %>
 

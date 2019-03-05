@@ -1,10 +1,8 @@
-
+<h3>Create a Theatre</h3>
 <%= simple_form_for @theatre do |f| %>
-  <%= f.input :t_title%>
-  <%= f.input :t_body %>
-
-  <%= f.button :submit %>
-
+  <%= f.input :t_title,label: 'Title'%>
+  <%= f.input :t_body, label: 'Summary' %>
+  <%= f.button :submit,class:"btn btn-outline-primary my-2 my-sm-1" %>
 <% end %>
 
 

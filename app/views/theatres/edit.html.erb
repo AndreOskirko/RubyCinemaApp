@@ -1,0 +1,9 @@
+<h3>Edit a Theatre</h3>
+<%= form_with model: @theatre do |form| %>
+  Name
+  <%= form.text_field :t_title, placeholder: "Title", class:"input-group input-group-sm mb-4"%>
+  Summary
+  <%= form.text_field :t_body, placeholder: "Summary",class:"input-group input-group-sm mb-4" %>
+
+  <%= form.submit %>
+<% end %>

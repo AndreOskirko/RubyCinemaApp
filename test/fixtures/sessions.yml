@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  theatre: MyString
+  text,: MyString
+  film: MyString
+  text,: MyString
+  time: MyString
+  text: MyString
+
+two:
+  theatre: MyString
+  text,: MyString
+  film: MyString
+  text,: MyString
+  time: MyString
+  text: MyString

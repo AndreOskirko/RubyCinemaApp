@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cinemaapp</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" href="#">
+      <img src="https://image.flaticon.com/icons/png/512/83/83519.png" width="30" height="30" alt="">
+    </a>
+    <form class="form-inline my-2 my-lg-0">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <%= link_to "Theatres", theatres_path, class:"nav-link"%>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "All films", films_path, class:"nav-link"%>
+        </li>
+        <li class="nav-item active">
+          <%= link_to "Sessions", sessions_path, class:"nav-link"%>
+        </li>
+
+      </ul>
+    </form>
+
+  </div>
+</nav>
+<%= yield %>
+</body>
+</html>

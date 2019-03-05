@@ -1,0 +1,6 @@
+<h1><%= @film.f_title %></h1>
+<h3><%= @film.f_body %></h3>
+<div class="btn-group" role="group" aria-label="Basic">
+<%= button_to 'Remove', @film, method: :delete, data: {confirm: 'Удалить?'},class: "btn btn-outline-primary my-2 my-sm-0"%>
+  <%= button_to 'Edit', edit_film_path(@film), method: 'get', class: "btn btn-outline-primary my-2 my-sm-0"%>
+</div>

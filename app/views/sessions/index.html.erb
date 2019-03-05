@@ -1,0 +1,20 @@
+
+
+<% @sessions.each do |session| %>
+
+
+
+
+  <div class="card" style="margin: 40px">
+
+    <div class="card-body">
+      <h5 class="card-title"><%=link_to session.time, session_path(session) %></h5>
+      <p class="card-text"><%= link_to session.theatre, session_path(session)%></p>
+
+    </div>
+  </div>
+
+<% end %>
+<form class="form-inline my-2 my-lg-0">
+  <%= link_to "Add a New session", new_session_path, class: "btn btn-outline-primary my-2 my-sm-0", style: "margin: 40px" %>
+</form>

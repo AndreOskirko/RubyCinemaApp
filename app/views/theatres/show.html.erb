@@ -1,0 +1,9 @@
+<h1><%= @theatre.t_title %></h1>
+<h3><%= @theatre.t_body %></h3>
+<h2 style="padding: inherit">Sessions</h2>
+
+<div class="btn-group" role="group" aria-label="Basic">
+   <%= button_to 'Edit', edit_theatre_path(@theatre), method: 'get', class: "btn btn-outline-primary my-2 my-sm-0"%>
+<%= button_to 'Remove', @theatre, method: :delete, data: {confirm: 'Удалить?'},class: "btn btn-outline-primary my-2 my-sm-0"%>
+
+</div>

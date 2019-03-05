@@ -1,0 +1,7 @@
+<h3>Edit a Session</h3>
+<%= simple_form_for @session do |f| %>
+  <%= f.input :theatre, collection: Theatre.all.map{|item|[item.t_title]},include_blank: true, style:"margin: 40px" %>
+  <%= f.input :film, collection: Film.all.map{|item|[item.f_title]},include_blank: true%>
+  <%=f.input :time %>
+  <%= f.button :submit,class:"btn btn-outline-primary my-2 my-sm-" %>
+<% end %>
